@@ -1,0 +1,25 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.MessagesList {
+  @include flex(column, flex-start, flex-start);
+  width: 50%;
+
+  &__message {
+    position: relative;
+    padding: 5px 15px;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 6px;
+
+    :first-child {
+      color: $primary_color;
+    }
+
+    :nth-child(3) {
+      color: $grey;
+      font-size: 12px;
+    }
+
+  }
+}
