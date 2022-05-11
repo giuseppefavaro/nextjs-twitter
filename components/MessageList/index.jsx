@@ -13,11 +13,13 @@ const MessagesList = ({ reloadData }) => {
     }, [reloadData]);
 
 
+    const orderListByTime = (list) => list.slice(0).reverse();
+
     return (
         <div className={styles.MessagesList}>
 
             {messagesList &&
-            messagesList.map((message) => (
+            orderListByTime(messagesList).map((message) => (
             <div className={styles.MessagesList__message} key={message.id}>
                 <h3>{message.text}</h3>
                 <p>{message.sender}</p>
