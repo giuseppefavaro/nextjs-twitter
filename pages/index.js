@@ -22,7 +22,7 @@ export default function Home() {
 
       <main className={styles.main}>
       <AddNewMessage reloadData={reloadData} setReloadData={setReloadData} />
-      <MessagesList reloadData={reloadData} />
+      <MessagesList reloadData={reloadData} setReloadData={setReloadData} />
 
       </main>
 

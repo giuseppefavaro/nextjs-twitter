@@ -24,10 +24,20 @@ const POST = async (type, body) => {
 };
 
 
-  
+const DELETE = async (type, id) => {
+    const response = await fetch(`${BASE_URL}${type}/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    });
+
+    const data = await response.json();
+    return data;
+};
 
   
 
 
 
-export { GET, POST };
+export { GET, POST, DELETE };
