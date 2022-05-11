@@ -1,11 +1,17 @@
+import { useState } from 'react';
+
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 
-import MessagesList from '../components/MessageList'
+import MessagesList from '../components/MessageList';
+import AddNewMessage from '../components/AddNewMessage';
 
 export default function Home() {
+
+  const [reloadData, setReloadData] = useState(false);
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +21,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <MessagesList />
+      <AddNewMessage reloadData={reloadData} setReloadData={setReloadData} />
+      <MessagesList reloadData={reloadData} />
+
       </main>
 
       <footer className={styles.footer}>

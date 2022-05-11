@@ -10,8 +10,24 @@ const GET = async (type) => {
 
 
 
+const POST = async (type, body) => {
+    const response = await fetch(`${BASE_URL}${type}`, {
+        method: "POST",
+        body,
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+
+    const data = await response.json();
+    return data;
+};
+
+
+  
+
+  
 
 
 
-
-export { GET };
+export { GET, POST };

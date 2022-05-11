@@ -3,19 +3,21 @@ import { useState, useEffect } from "react";
 
 import {GET} from "../../utils/api"
 
-const MessagesList = () => {
+const MessagesList = ({ reloadData }) => {
 
-    const [MessagesList, setMessagesList] = useState([]);
-
+    const [messagesList, setMessagesList] = useState([]);
+  
     useEffect(() => {
-        GET("messages").then((data) => setMessagesList(data));
-    }, [])
+      GET("messages").then((data) => setMessagesList(data));
+      console.log("ho rieffettuato il get")
+    }, [reloadData]);
 
 
     return (
         <div className={styles.MessagesList}>
 
-            {MessagesList.map((message) => (
+            {messagesList &&
+            messagesList.map((message) => (
             <div className={styles.MessagesList__message} key={message.id}>
                 <h3>{message.text}</h3>
                 <p>{message.sender}</p>
