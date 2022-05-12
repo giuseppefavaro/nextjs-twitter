@@ -13,8 +13,8 @@ const DynamicMessage = () => {
     //Id dinamico
     const { id } = router.query;
 
-
     const [messageData, setMessageData] = useState({});
+
 
 
     const onMessageDelete = (id) => {  
@@ -27,12 +27,21 @@ const DynamicMessage = () => {
     };
 
 
+    
     useEffect(() => {
-        GET(`messages/${id}`).then((data) => {
-            setMessageData(data);
-        });
+        // Al refresh id è undefined
+        id && localStorage.setItem("id", id);
+
+        GET(`messages/${localStorage.getItem("id")}`).then((data) => 
+            setMessageData(data)
+        );
+
+        // GET(`messages/${id}`).then((data) => {
+        //     setMessageData(data);
+        // });
     }, []);
     
+
 
     return (
         <>
