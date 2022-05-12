@@ -28,13 +28,14 @@ const AddNewMessage = ({ setReloadData, reloadData }) => {
     return (
         <div className={styles.AddNewMessage}>
             <form onSubmit={onSendData}>
-                <label htmlFor="message">Messaggio</label>
-                <input value={messageInput} onChange={(e) => setmessageInput(e.target.value)} type="text" id="message" name="message" />
 
                 <label htmlFor="user">Utente</label>
-                <input value={userInput} onChange={(e) => setUserInput(e.target.value) } type="text" id="user" name="user" />
+                <input class={styles.AddNewMessage__input}value={userInput} onChange={(e) => setUserInput(e.target.value) } type="text" id="user" name="user" placeholder="Inserisci nome utente" required />
 
-                <input type="submit" value="Invia" />
+                <label htmlFor="message">Messaggio</label>
+                <textarea class={styles.AddNewMessage__textarea} value={messageInput} onChange={(e) => setmessageInput(e.target.value)} id="message" name="message" placeholder="Inserisci messaggio" required></textarea>
+
+                <input class={styles.AddNewMessage__btn} type="submit" value="Invia" />
             </form>
         </div>
     )

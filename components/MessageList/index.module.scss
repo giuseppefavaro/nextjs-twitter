@@ -3,7 +3,7 @@
 
 .MessagesList {
   @include flex(column, flex-start, flex-start);
-  width: 50%;
+
 
   &__message {
     position: relative;
@@ -19,6 +19,21 @@
     :nth-child(3) {
       color: $grey;
       font-size: 12px;
+    }
+
+    button {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background:  $grey;
+      color: #fff;
     }
 
   }

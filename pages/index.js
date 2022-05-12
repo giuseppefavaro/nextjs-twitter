@@ -1,11 +1,15 @@
 import { useState } from 'react';
+import Image from 'next/image';
 
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
+import styles from '../styles/Home.module.scss'
+// import LayoutDefault from "../components/LayoutDefault";
+import logo from "../public/logo.svg"
 
 import MessagesList from '../components/MessageList';
 import AddNewMessage from '../components/AddNewMessage';
+
+import Link from "next/link";
 
 export default function Home() {
 
@@ -13,21 +17,29 @@ export default function Home() {
 
 
   return (
-    <div className={styles.container}>
+    <>
+
       <Head>
         <title>NextJS Twitter</title>
         <meta name="description" content="NextJS Twitter" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-      <AddNewMessage reloadData={reloadData} setReloadData={setReloadData} />
-      <MessagesList reloadData={reloadData} setReloadData={setReloadData} />
+      <div className={styles.wrapperLeft}>
+        <div>
+        <Image className={styles.wrapperLeft__logo} src={logo} width="100px" height="100px" alt="Twitter Logo" />
+        <AddNewMessage reloadData={reloadData} setReloadData={setReloadData} />
+        </div>
+      </div>
 
-      </main>
+      <div className={styles.wrapperRight}>
+        <div>
+        <MessagesList reloadData={reloadData} setReloadData={setReloadData} /> 
+        </div>
+      </div>
 
-      <footer className={styles.footer}>
-      </footer>
-    </div>
+      <Link href="/messages" ><a className={styles.allMessagesBtn}>Vedi tutti i messaggi</a></Link>
+
+    </>
   )
 }

@@ -1,12 +1,17 @@
 import styles from "./index.module.scss";
 
 import MessagesList from '../../components/MessageList';
+import LayoutStaticMessage from "../../components/LayoutStaticMessage";
 
 const Message = () => {
     return (
-        <div>
+        <LayoutStaticMessage>
+            <div>
             <MessagesList />
-        </div>
+            </div>
+        </LayoutStaticMessage>
+
+        
     )
 }
 

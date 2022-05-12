@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import styles from "./index.module.scss";
+import LayoutDynamicMessage from "../../components/LayoutDynamicMessages";
 
 import { GET, DELETE } from "../../utils/api";
 
@@ -44,14 +45,14 @@ const DynamicMessage = () => {
 
 
     return (
-        <>
+        <LayoutDynamicMessage>
         <div className={styles.wrapper}>
             <h3>{messageData.text}</h3>
             <p>{messageData.sender}</p>
             <p>{messageData.date}</p>
             <button onClick={() => onMessageDelete(messageData.id)}> x </button>
         </div>
-        </>
+        </LayoutDynamicMessage>
 
     )
 }

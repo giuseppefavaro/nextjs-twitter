@@ -1,3 +1,47 @@
+@import "../../styles/variables.scss";
+
+
 .AddNewMessage {
-    border: 1px solid red;
+    padding: 20px;
+
+    &__input, &__textarea, &__btn {
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        background: $white;
+        color: $black;
+        font-size: 14px;
+        outline: none;
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        margin-bottom: 20px; 
+    }
+
+    &__textarea {
+        min-height: 100px;
+        display: block;
+        resize: none;
+        font-family: inherit;
+        outline: none;
+    }
+
+
+    &__btn {      
+        margin-top: 20px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+
+
+    
+    label {
+        color: #fff;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
 }

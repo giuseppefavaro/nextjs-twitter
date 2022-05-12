@@ -1,0 +1,38 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+
+.wrapperLeft, .wrapperRight {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.wrapperLeft {
+  left: 0;
+  background: $primary_color;
+  @include flex(row, center, center, 10px);
+}
+
+.wrapperRight {
+  right: 0;
+  background: $white;
+}
+
+
+.allMessagesBtn {
+  z-index: 2;
+  border-radius: 4px;
+  padding: 10px 18px;
+  background: $primary_color;
+  color: $white;
+  font-weight: 700;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+
+}
