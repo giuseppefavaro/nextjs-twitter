@@ -30,12 +30,12 @@ const AddNewMessage = ({ setReloadData, reloadData }) => {
             <form onSubmit={onSendData}>
 
                 <label htmlFor="user">Utente</label>
-                <input class={styles.AddNewMessage__input}value={userInput} onChange={(e) => setUserInput(e.target.value) } type="text" id="user" name="user" placeholder="Inserisci nome utente" required />
+                <input className={styles.AddNewMessage__input}value={userInput} onChange={(e) => setUserInput(e.target.value) } type="text" id="user" name="user" placeholder="Inserisci nome utente" required />
 
                 <label htmlFor="message">Messaggio</label>
-                <textarea class={styles.AddNewMessage__textarea} value={messageInput} onChange={(e) => setmessageInput(e.target.value)} id="message" name="message" placeholder="Inserisci messaggio" required></textarea>
+                <textarea className={styles.AddNewMessage__textarea} value={messageInput} onChange={(e) => setmessageInput(e.target.value)} id="message" name="message" placeholder="Inserisci messaggio" required></textarea>
 
-                <input class={styles.AddNewMessage__btn} type="submit" value="Invia" />
+                <input className={styles.AddNewMessage__btn} type="submit" value="Invia" />
             </form>
         </div>
     )

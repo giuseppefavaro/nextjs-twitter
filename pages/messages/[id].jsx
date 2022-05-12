@@ -40,7 +40,7 @@ const DynamicMessage = () => {
         // GET(`messages/${id}`).then((data) => {
         //     setMessageData(data);
         // });
-    }, []);
+    }, [id]);
     
 
 
