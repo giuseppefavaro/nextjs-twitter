@@ -6,7 +6,7 @@ import LayoutStaticMessage from "../../components/LayoutStaticMessage";
 const Message = () => {
     return (
         <LayoutStaticMessage>
-            <div>
+            <div className={styles.wrapper}>
             <MessagesList />
             </div>
         </LayoutStaticMessage>

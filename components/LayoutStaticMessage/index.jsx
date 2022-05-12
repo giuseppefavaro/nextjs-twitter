@@ -1,15 +1,17 @@
 import styles from "./index.module.scss";
 
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const LayoutStaticMessage = ({ children }) => {
     return (
       <div>
 
-        <header>HEader LayoutStaticMessage</header>
+        <Header />
   
         {children}
   
-        <footer>Footer LayoutStaticMessage</footer>
+        <Footer />
         
       </div>
     );

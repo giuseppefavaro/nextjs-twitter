@@ -1,11 +1,12 @@
 import styles from "./index.module.scss";
 
+import Header from "../../components/Header";
 
 const LayoutDynamicMessages = ({ children }) => {
     return (
       <div>
 
-        <header>HEader LayoutDynamicMessages</header>
+        <Header />
   
         {children}
   
