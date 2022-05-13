@@ -28,18 +28,16 @@ const MessagesList = ({ reloadData, setReloadData }) => {
     const orderListByTime = (list) => list.slice(0).reverse();
 
     return (
-        <div className={styles.MessagesList}>
-
+        <div className={styles.wrapper}>
             {messagesList &&
             orderListByTime(messagesList).map((message) => (
-            <div className={styles.MessagesList__message} key={message.id}>
-                <h3>{message.text}</h3>
-                <Link href={`/messages/${message.id}`}><a>{message.sender}</a></Link>
-                <p>{message.date}</p>
-                <button onClick={() => onMessageDelete(message.id)}> x </button>
+            <div className={styles.wrapper__message} key={message.id}>
+                <Link href={`/messages/${message.id}`}><a className={styles.wrapper__message__title}><h3>{message.sender}</h3></a></Link>
+                <p className={styles.wrapper__message__text}>{message.text}</p>
+                <p className={styles.wrapper__message__date}>{message.date}</p>
+                <button className={styles.wrapper__message__btn} onClick={() => onMessageDelete(message.id)}>x</button>
             </div>
-            ) )}
-            
+            ) )}       
         </div>
     )
 }

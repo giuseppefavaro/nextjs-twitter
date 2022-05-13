@@ -1,4 +1,51 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
 .wrapper {
-    width: 1200px;
-    margin: 0 auto;
+    position: relative;
+    padding: 5px 15px;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 6px;
+
+    &__title {
+        color: $primary_color;
+    }
+
+    &__text {
+        color: $black;
+    }
+
+    &__date {
+        color: $grey;
+        font-size: 12px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background:  $grey;
+        color: $white;
+    }
+
 }
+
+
+  .backBtn {
+      display: inline-block;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      padding: 4px 8px;
+      font-size: 14px;border: 1px solid $grey;
+      color:$grey;
+
+  }
+

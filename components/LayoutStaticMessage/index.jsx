@@ -8,8 +8,10 @@ const LayoutStaticMessage = ({ children }) => {
       <div>
 
         <Header />
-  
+        
+        <div className={styles.wrapper}>
         {children}
+        </div>
   
         <Footer />
         

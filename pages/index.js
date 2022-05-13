@@ -33,9 +33,7 @@ export default function Home() {
       </div>
 
       <div className={styles.wrapperRight}>
-        <div>
         <MessagesList reloadData={reloadData} setReloadData={setReloadData} /> 
-        </div>
       </div>
 
       <Link href="/messages" ><a className={styles.allMessagesBtn}>Vedi tutti i messaggi</a></Link>
