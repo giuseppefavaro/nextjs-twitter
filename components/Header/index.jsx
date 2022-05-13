@@ -21,6 +21,9 @@ const Header = () => {
                 <li>
                     <Link href="/messages"><a>Messaggi</a></Link>
                 </li>
+                <li>
+                    <Link href="/slider"><a>Slider</a></Link>
+                </li>
             </ul>
 
         </header>

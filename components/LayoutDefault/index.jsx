@@ -1,18 +1,16 @@
-//import Image from "next/image";
-//import Link from "next/link";
-//import logo from "../../public/logo.png";
-//import styles from "./index.module.scss";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 
 const LayoutDefault = ({ children }) => {
     return (
       <div>
 
-        <header></header>
+        <Header />
   
         {children}
   
-        <footer></footer>
+        <Footer />
         
       </div>
     );
