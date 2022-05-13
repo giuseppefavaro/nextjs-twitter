@@ -6,8 +6,8 @@ import Footer from "../../components/Footer";
 const LayoutDynamicMessages = ({ children }) => {
     return (
 
-      <div class={styles.wrapper}>
-        <div class={styles.wrapper__content}>
+      <div className={styles.wrapper}>
+        <div className={styles.wrapper__content}>
           {children}
         </div>
       </div>
